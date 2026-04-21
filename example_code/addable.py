@@ -8,12 +8,12 @@ class Addable(ABC):
         return NotImplemented
 
     @classmethod
-    def __subclasshook__(cls, C):
+    def __subclasshook__(cls, c):
         if cls is not Addable:
             return NotImplemented
-        for B in C.__mro__:
-            if "__add__" in B.__dict__:
-                if B.__dict__["__add__"] is None:
+        for b in c.__mro__:
+            if "__add__" in b.__dict__:
+                if b.__dict__["__add__"] is None:
                     return NotImplemented
                 return True
         return NotImplemented

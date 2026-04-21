@@ -2,7 +2,7 @@
     questions.'''
 
 
-class a:
+class A:
     def __init__(self, b):
         self.b = b
 
@@ -10,7 +10,7 @@ class a:
         return float(self.b)
 
 
-d = a
-e = a(2)
+d = A
+e = A(2)
 f = e.c()
 g = e.c
